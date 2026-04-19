@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-editorial-bg: #0F0F0F;
+  --color-editorial-sidebar: #161616;
+  --color-editorial-accent: #E0E0E0;
+  --color-editorial-text-main: #FFFFFF;
+  --color-editorial-text-dim: #888888;
+  --color-editorial-border: rgba(255, 255, 255, 0.1);
+  --color-editorial-input: #1A1A1A;
+}
+
+/* Custom scrollbar for better look in dark mode */
+@layer utilities {
+  .scrollbar-editorial::-webkit-scrollbar {
+    width: 4px;
+  }
+  .scrollbar-editorial::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-editorial::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  .scrollbar-editorial::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.prose {
+  color: inherit;
+}
+.prose p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.prose p:first-child {
+  margin-top: 0;
+}
+.prose p:last-child {
+  margin-bottom: 0;
+}
+.prose ul, .prose ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.prose ul {
+  list-style-type: disc;
+}
+.prose ol {
+  list-style-type: decimal;
+}
+.prose strong {
+  font-weight: 600;
+  color: var(--color-editorial-accent);
+}
+.prose h1, .prose h2, .prose h3 {
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: var(--color-editorial-accent);
+}
+.prose h1 { font-size: 1.8em; letter-spacing: -0.02em; }
+.prose h2 { font-size: 1.5em; letter-spacing: -0.01em; }
+.prose h3 { font-size: 1.25em; }
+
+/* Code block adjustments for editorial theme */
+.prose pre {
+  background: #000000 !important;
+  border: 1px solid var(--color-editorial-border);
+  padding: 1.5rem !important;
+  border-radius: 8px;
+}
+
+
